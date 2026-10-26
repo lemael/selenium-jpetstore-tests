@@ -149,16 +149,63 @@ target/surefire-reports/
 | Add to cart | Adds item `EST-33` |
 | Cart verification | Checks that `EST-33` appears in the page source |
 
-## Future Improvements
+## Running Tests with Docker
 
-Potential improvements include:
+This project supports running Selenium tests in a Docker container with Java 21, Maven, and Google Chrome.
 
-- Add explicit waits to improve test stability.
-- Introduce reusable assertions for shopping-cart contents.
-- Implement additional Page Objects for other application pages.
-- Add positive and negative test scenarios.
-- Integrate test execution into a GitHub Actions CI/CD workflow.
-- Generate and publish test reports as CI artifacts.
+### Prerequisites
+
+- [Docker](https://www.docker.com/) installed and running.
+- Internet access to download Maven dependencies and, if required, the compatible ChromeDriver.
+
+### Docker Configuration
+
+The `Dockerfile` defines an environment containing:
+
+- **Java 21** – Runtime and development environment.
+- **Maven** – Dependency management and test execution.
+- **Google Chrome** – Browser used by Selenium WebDriver.
+- **Selenium WebDriver** – Browser automation.
+- **JUnit 5** – Test execution and assertions.
+
+Chrome runs in headless mode inside the container, so no graphical interface is required.
+
+### Build the Docker Image
+
+From the project root directory, run:
+
+```bash
+docker build -t selenium-jpetstore-tests .
+```
+
+### Run the Tests
+
+Execute the Selenium tests inside the Docker container:
+
+```bash
+docker run --rm selenium-jpetstore-tests
+```
+
+The test results are displayed in the terminal.
+
+### Run Tests Locally
+
+To execute the tests directly on your machine, make sure Java 21, Maven, and Google Chrome are installed.
+
+Run:
+
+```bash
+mvn test
+```
+
+When running locally, Chrome can be configured to open in a visible browser window by adjusting the `ChromeOptions` configuration.
+
+### Notes
+
+- Selenium Manager can automatically manage ChromeDriver when the environment allows it to download the required driver.
+- Chrome runs in headless mode inside Docker.
+- The target application, JPetStore, must be accessible from the test environment.
+- If the tests fail, check the Maven output and the reports generated under `target/surefire-reports/`.
 
 ## Author
 
