@@ -1,0 +1,1490 @@
+{
+  "elementCount" : 240,
+  "elements" : [ {
+    "attributes" : {
+      "data-bs-theme" : "light",
+      "lang" : "en"
+    },
+    "tag" : "html",
+    "text" : "ASPECTRAN\n\nA FULL-STACK SAMPLE WEB APPLICATION BUILT ON TOP OF ASPECTRAN AND MYBATIS\n\nJPetStore Demo\n\nThe goal of the JPetStore Demo App is to provide and demonstrate a sample web application that leverages Aspectran and MyBatis.\n\nSample Apps\nJPetStore Demo\nCategories \nAppMon\n?\n 0 Sign In Sign Up\nBulldog\nReturn to DOGS\nItem ID\tProduct ID\tDescription\tList Price\t \nEST-33\tK9-BD-01\tFrench Bulldog Puppy Bulldog\t$180,00\tAdd to Cart\nEST-6\tK9-BD-01\tMale Adult Bulldog\t$18,50\tAdd to Cart\nEST-7\tK9-BD-01\tFe"
+  }, {
+    "attributes" : { },
+    "tag" : "head",
+    "text" : "(() => {\n            const getStoredTheme = () => localStorage.getItem('theme');\n            const getPreferredTheme = () => {\n                const storedTheme = getStoredTheme();\n                if (storedTheme) {\n                    return storedTheme;\n                }\n                return 'auto';\n            };\n            const setTheme = theme => {\n                const newTheme = theme === 'auto'\n                    ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' "
+  }, {
+    "attributes" : {
+      "charset" : "utf-8"
+    },
+    "tag" : "meta",
+    "text" : ""
+  }, {
+    "attributes" : { },
+    "tag" : "script",
+    "text" : "(() => {\n            const getStoredTheme = () => localStorage.getItem('theme');\n            const getPreferredTheme = () => {\n                const storedTheme = getStoredTheme();\n                if (storedTheme) {\n                    return storedTheme;\n                }\n                return 'auto';\n            };\n            const setTheme = theme => {\n                const newTheme = theme === 'auto'\n                    ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' "
+  }, {
+    "attributes" : {
+      "content" : "width=device-width, initial-scale=1",
+      "name" : "viewport"
+    },
+    "tag" : "meta",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "content" : "notranslate",
+      "name" : "google"
+    },
+    "tag" : "meta",
+    "text" : ""
+  }, {
+    "attributes" : { },
+    "tag" : "title",
+    "text" : "JPetStore Demo"
+  }, {
+    "attributes" : {
+      "content" : "Welcome to the Aspectran Demo Site",
+      "name" : "description"
+    },
+    "tag" : "meta",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "color" : "#4B555A",
+      "href" : "https://cdn.jsdelivr.net/gh/aspectran/aspectran-assets@main/assets/img/aspectran-logo.svg",
+      "rel" : "mask-icon"
+    },
+    "tag" : "link",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "href" : "https://cdn.jsdelivr.net/gh/aspectran/aspectran-assets@main/assets/img/apple-icon-57x57.png",
+      "rel" : "apple-touch-icon",
+      "sizes" : "57x57"
+    },
+    "tag" : "link",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "href" : "https://cdn.jsdelivr.net/gh/aspectran/aspectran-assets@main/assets/img/apple-icon-60x60.png",
+      "rel" : "apple-touch-icon",
+      "sizes" : "60x60"
+    },
+    "tag" : "link",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "href" : "https://cdn.jsdelivr.net/gh/aspectran/aspectran-assets@main/assets/img/apple-icon-72x72.png",
+      "rel" : "apple-touch-icon",
+      "sizes" : "72x72"
+    },
+    "tag" : "link",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "href" : "https://cdn.jsdelivr.net/gh/aspectran/aspectran-assets@main/assets/img/apple-icon-76x76.png",
+      "rel" : "apple-touch-icon",
+      "sizes" : "76x76"
+    },
+    "tag" : "link",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "href" : "https://cdn.jsdelivr.net/gh/aspectran/aspectran-assets@main/assets/img/apple-icon-114x114.png",
+      "rel" : "apple-touch-icon",
+      "sizes" : "114x114"
+    },
+    "tag" : "link",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "href" : "https://cdn.jsdelivr.net/gh/aspectran/aspectran-assets@main/assets/img/apple-icon-120x120.png",
+      "rel" : "apple-touch-icon",
+      "sizes" : "120x120"
+    },
+    "tag" : "link",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "href" : "https://cdn.jsdelivr.net/gh/aspectran/aspectran-assets@main/assets/img/apple-icon-144x144.png",
+      "rel" : "apple-touch-icon",
+      "sizes" : "144x144"
+    },
+    "tag" : "link",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "href" : "https://cdn.jsdelivr.net/gh/aspectran/aspectran-assets@main/assets/img/apple-icon-152x152.png",
+      "rel" : "apple-touch-icon",
+      "sizes" : "152x152"
+    },
+    "tag" : "link",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "href" : "https://cdn.jsdelivr.net/gh/aspectran/aspectran-assets@main/assets/img/apple-icon-180x180.png",
+      "rel" : "apple-touch-icon",
+      "sizes" : "180x180"
+    },
+    "tag" : "link",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "href" : "https://cdn.jsdelivr.net/gh/aspectran/aspectran-assets@main/assets/img/android-icon-192x192.png",
+      "rel" : "icon",
+      "sizes" : "192x192",
+      "type" : "image/png"
+    },
+    "tag" : "link",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "href" : "https://cdn.jsdelivr.net/gh/aspectran/aspectran-assets@main/assets/img/favicon-16x16.png",
+      "rel" : "icon",
+      "sizes" : "16x16",
+      "type" : "image/png"
+    },
+    "tag" : "link",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "href" : "https://cdn.jsdelivr.net/gh/aspectran/aspectran-assets@main/assets/img/favicon-32x32.png",
+      "rel" : "icon",
+      "sizes" : "32x32",
+      "type" : "image/png"
+    },
+    "tag" : "link",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "href" : "https://cdn.jsdelivr.net/gh/aspectran/aspectran-assets@main/assets/img/favicon-96x96.png",
+      "rel" : "icon",
+      "sizes" : "96x96",
+      "type" : "image/png"
+    },
+    "tag" : "link",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "content" : "https://cdn.jsdelivr.net/gh/aspectran/aspectran-assets@main/assets/img/ms-icon-144x144.png",
+      "name" : "msapplication-TileImage"
+    },
+    "tag" : "meta",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "content" : "#4B555A",
+      "name" : "msapplication-TileColor"
+    },
+    "tag" : "meta",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "href" : "https://cdn.jsdelivr.net/gh/aspectran/aspectran-assets@main/assets/bootstrap@5.3.8/css/aspectran.css",
+      "rel" : "stylesheet",
+      "type" : "text/css"
+    },
+    "tag" : "link",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "href" : "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap",
+      "rel" : "stylesheet"
+    },
+    "tag" : "link",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "crossorigin" : "anonymous",
+      "integrity" : "sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=",
+      "src" : "https://code.jquery.com/jquery-3.7.1.min.js"
+    },
+    "tag" : "script",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "crossorigin" : "anonymous",
+      "href" : "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css",
+      "integrity" : "sha256-pdY4ejLKO67E0CM2tbPtq1DJ3VGDVVdqAR6j3ZwdiE4=",
+      "rel" : "stylesheet"
+    },
+    "tag" : "link",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "crossorigin" : "anonymous",
+      "integrity" : "sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI",
+      "src" : "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    },
+    "tag" : "script",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "crossorigin" : "anonymous",
+      "integrity" : "sha256-YCMa5rqds4JesVomESLV9VkhxNU7Zr9jfcGLTuJ8efk=",
+      "src" : "https://cdn.jsdelivr.net/npm/htmx.org@2.0.7/dist/htmx.min.js"
+    },
+    "tag" : "script",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "src" : "https://cdn.jsdelivr.net/gh/aspectran/aspectran-assets@main/assets/js/navigation.js?v=20250923"
+    },
+    "tag" : "script",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "src" : "https://cdn.jsdelivr.net/gh/aspectran/aspectran-assets@main/assets/js/theme-toggler.js?v=20251005"
+    },
+    "tag" : "script",
+    "text" : ""
+  }, {
+    "attributes" : { },
+    "tag" : "style",
+    "text" : ".htmx-indicator{opacity:0;visibility: hidden} .htmx-request .htmx-indicator, .htmx-request.htmx-indicator{opacity:1;visibility: visible;transition: opacity 200ms ease-in}"
+  }, {
+    "attributes" : {
+      "class" : "plate solid console",
+      "id" : "top-of-page",
+      "itemscope" : "",
+      "itemtype" : "https://schema.org/WebPage"
+    },
+    "tag" : "body",
+    "text" : "ASPECTRAN\n\nA FULL-STACK SAMPLE WEB APPLICATION BUILT ON TOP OF ASPECTRAN AND MYBATIS\n\nJPetStore Demo\n\nThe goal of the JPetStore Demo App is to provide and demonstrate a sample web application that leverages Aspectran and MyBatis.\n\nSample Apps\nJPetStore Demo\nCategories \nAppMon\n?\n 0 Sign In Sign Up\nBulldog\nReturn to DOGS\nItem ID\tProduct ID\tDescription\tList Price\t \nEST-33\tK9-BD-01\tFrench Bulldog Puppy Bulldog\t$180,00\tAdd to Cart\nEST-6\tK9-BD-01\tMale Adult Bulldog\t$18,50\tAdd to Cart\nEST-7\tK9-BD-01\tFe"
+  }, {
+    "attributes" : {
+      "class" : "navbar navbar-expand-lg",
+      "data-bs-theme" : "dark",
+      "id" : "navigation"
+    },
+    "tag" : "nav",
+    "text" : "ASPECTRAN"
+  }, {
+    "attributes" : {
+      "class" : "title-bar"
+    },
+    "tag" : "div",
+    "text" : "ASPECTRAN"
+  }, {
+    "attributes" : {
+      "class" : "title-bar-left"
+    },
+    "tag" : "div",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "navbar-brand logo",
+      "href" : "https://public.aspectran.com/",
+      "title" : "Aspectran"
+    },
+    "tag" : "a",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "title-bar-center"
+    },
+    "tag" : "div",
+    "text" : "ASPECTRAN"
+  }, {
+    "attributes" : {
+      "href" : "#top-of-page"
+    },
+    "tag" : "a",
+    "text" : "ASPECTRAN"
+  }, {
+    "attributes" : {
+      "class" : "title-bar-right"
+    },
+    "tag" : "div",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "aria-controls" : "navbarSupportedContent",
+      "aria-expanded" : "false",
+      "aria-label" : "Toggle navigation",
+      "class" : "navbar-toggler",
+      "data-bs-target" : "#navbarSupportedContent",
+      "data-bs-toggle" : "collapse",
+      "type" : "button"
+    },
+    "tag" : "button",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "navbar-toggler-icon"
+    },
+    "tag" : "span",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "top-bar collapse navbar-collapse",
+      "id" : "navbarSupportedContent"
+    },
+    "tag" : "div",
+    "text" : "Sample Apps\n                        \n                            \n                                JPetStore Demo\n                                PetClinic Demo\n                                Aspectran Examples\n                            \n                            \n                        \n                    \n                    \n                        Get Involved\n                        \n                            GitHub\n                        \n                    \n                \n    "
+  }, {
+    "attributes" : {
+      "class" : "container d-lg-flex g-0 g-lg-4"
+    },
+    "tag" : "div",
+    "text" : "Sample Apps\n                        \n                            \n                                JPetStore Demo\n                                PetClinic Demo\n                                Aspectran Examples\n                            \n                            \n                        \n                    \n                    \n                        Get Involved\n                        \n                            GitHub\n                        \n                    \n                \n    "
+  }, {
+    "attributes" : {
+      "class" : "top-bar-logo"
+    },
+    "tag" : "div",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "navbar-brand logo",
+      "href" : "https://public.aspectran.com/",
+      "title" : "Aspectran"
+    },
+    "tag" : "a",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "top-bar-left me-auto"
+    },
+    "tag" : "div",
+    "text" : "Sample Apps\n                        \n                            \n                                JPetStore Demo\n                                PetClinic Demo\n                                Aspectran Examples\n                            \n                            \n                        \n                    \n                    \n                        Get Involved\n                        \n                            GitHub"
+  }, {
+    "attributes" : {
+      "class" : "navbar-nav"
+    },
+    "tag" : "ul",
+    "text" : "Sample Apps\n                        \n                            \n                                JPetStore Demo\n                                PetClinic Demo\n                                Aspectran Examples\n                            \n                            \n                        \n                    \n                    \n                        Get Involved\n                        \n                            GitHub"
+  }, {
+    "attributes" : {
+      "class" : "nav-item dropdown"
+    },
+    "tag" : "li",
+    "text" : "Sample Apps\n                        \n                            \n                                JPetStore Demo\n                                PetClinic Demo\n                                Aspectran Examples"
+  }, {
+    "attributes" : {
+      "aria-expanded" : "false",
+      "class" : "nav-link dropdown-toggle",
+      "data-bs-toggle" : "dropdown",
+      "role" : "button",
+      "title" : "Sample applications built on Aspectran"
+    },
+    "tag" : "a",
+    "text" : "Sample Apps"
+  }, {
+    "attributes" : {
+      "class" : "dropdown-menu"
+    },
+    "tag" : "ul",
+    "text" : "JPetStore Demo\n                                PetClinic Demo\n                                Aspectran Examples"
+  }, {
+    "attributes" : { },
+    "tag" : "li",
+    "text" : "JPetStore Demo"
+  }, {
+    "attributes" : {
+      "class" : "dropdown-item",
+      "href" : "https://jpetstore.aspectran.com"
+    },
+    "tag" : "a",
+    "text" : "JPetStore Demo"
+  }, {
+    "attributes" : { },
+    "tag" : "li",
+    "text" : "PetClinic Demo"
+  }, {
+    "attributes" : {
+      "class" : "dropdown-item",
+      "href" : "https://petclinic.aspectran.com"
+    },
+    "tag" : "a",
+    "text" : "PetClinic Demo"
+  }, {
+    "attributes" : { },
+    "tag" : "li",
+    "text" : "Aspectran Examples"
+  }, {
+    "attributes" : {
+      "class" : "dropdown-item",
+      "href" : "https://examples.aspectran.com/"
+    },
+    "tag" : "a",
+    "text" : "Aspectran Examples"
+  }, {
+    "attributes" : {
+      "class" : "nav-item"
+    },
+    "tag" : "li",
+    "text" : "Get Involved\n                        \n                            GitHub"
+  }, {
+    "attributes" : {
+      "class" : "nav-link"
+    },
+    "tag" : "a",
+    "text" : "Get Involved"
+  }, {
+    "attributes" : {
+      "class" : "dropdown-menu"
+    },
+    "tag" : "ul",
+    "text" : "GitHub"
+  }, {
+    "attributes" : { },
+    "tag" : "li",
+    "text" : "GitHub"
+  }, {
+    "attributes" : {
+      "class" : "dropdown-item external",
+      "href" : "https://github.com/aspectran/aspectran-jpetstore",
+      "target" : "_blank"
+    },
+    "tag" : "a",
+    "text" : "GitHub"
+  }, {
+    "attributes" : {
+      "class" : "top-bar-right d-lg-flex align-items-center gap-3"
+    },
+    "tag" : "div",
+    "text" : "Console\n                    \n                    \n                \n                \n                    \n                        \n                            \n                            \n                        \n                    \n                \n                \n                    \n                        \n                            \n                        \n                        \n                            \n                                \n                                    \n        "
+  }, {
+    "attributes" : {
+      "class" : "navbar-nav"
+    },
+    "tag" : "ul",
+    "text" : "Console"
+  }, {
+    "attributes" : {
+      "class" : "nav-item"
+    },
+    "tag" : "li",
+    "text" : "Console"
+  }, {
+    "attributes" : {
+      "class" : "nav-link",
+      "href" : "https://public.aspectran.com/console/",
+      "target" : "_blank"
+    },
+    "tag" : "a",
+    "text" : "Console"
+  }, {
+    "attributes" : {
+      "class" : "quick-search-box mx-3 my-2 m-lg-0"
+    },
+    "tag" : "div",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "name" : "google_quick_search",
+      "role" : "search"
+    },
+    "tag" : "form",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "input-group flex-nowrap"
+    },
+    "tag" : "div",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "aria-describedby" : "top-bar-quick-search-btn",
+      "aria-label" : "Search",
+      "class" : "form-control",
+      "name" : "keyword",
+      "placeholder" : "Search",
+      "type" : "text"
+    },
+    "tag" : "input",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "btn btn-outline-secondary text-white",
+      "id" : "top-bar-quick-search-btn",
+      "type" : "button"
+    },
+    "tag" : "button",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "bi bi-search"
+    },
+    "tag" : "i",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "settings d-flex justify-content-end align-items-center gap-2 mx-3 my-2 m-lg-0"
+    },
+    "tag" : "div",
+    "text" : "Light\n                                    \n                                \n                            \n                            \n                                \n                                    \n                                    Dark\n                                    \n                                \n                            \n                            \n                                \n                                    \n                                    Auto"
+  }, {
+    "attributes" : {
+      "class" : "theme-toggler dropdown"
+    },
+    "tag" : "div",
+    "text" : "Light\n                                    \n                                \n                            \n                            \n                                \n                                    \n                                    Dark\n                                    \n                                \n                            \n                            \n                                \n                                    \n                                    Auto"
+  }, {
+    "attributes" : {
+      "aria-expanded" : "false",
+      "aria-label" : "Toggle theme",
+      "class" : "btn btn-secondary dropdown-toggle",
+      "data-bs-toggle" : "dropdown",
+      "id" : "theme-toggler-btn",
+      "type" : "button"
+    },
+    "tag" : "button",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "bi theme-icon-active bi-circle-half"
+    },
+    "tag" : "i",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "aria-labelledby" : "theme-toggler-btn",
+      "class" : "dropdown-menu dropdown-menu-end"
+    },
+    "tag" : "ul",
+    "text" : "Light\n                                    \n                                \n                            \n                            \n                                \n                                    \n                                    Dark\n                                    \n                                \n                            \n                            \n                                \n                                    \n                                    Auto"
+  }, {
+    "attributes" : { },
+    "tag" : "li",
+    "text" : "Light"
+  }, {
+    "attributes" : {
+      "class" : "dropdown-item d-flex align-items-center",
+      "data-bs-theme-value" : "light",
+      "type" : "button"
+    },
+    "tag" : "button",
+    "text" : "Light"
+  }, {
+    "attributes" : {
+      "class" : "bi bi-sun-fill me-2 opacity-50"
+    },
+    "tag" : "i",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "bi bi-check2 ms-auto d-none"
+    },
+    "tag" : "i",
+    "text" : ""
+  }, {
+    "attributes" : { },
+    "tag" : "li",
+    "text" : "Dark"
+  }, {
+    "attributes" : {
+      "class" : "dropdown-item d-flex align-items-center",
+      "data-bs-theme-value" : "dark",
+      "type" : "button"
+    },
+    "tag" : "button",
+    "text" : "Dark"
+  }, {
+    "attributes" : {
+      "class" : "bi bi-moon-stars-fill me-2 opacity-50"
+    },
+    "tag" : "i",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "bi bi-check2 ms-auto d-none"
+    },
+    "tag" : "i",
+    "text" : ""
+  }, {
+    "attributes" : { },
+    "tag" : "li",
+    "text" : "Auto"
+  }, {
+    "attributes" : {
+      "class" : "dropdown-item d-flex align-items-center active",
+      "data-bs-theme-value" : "auto",
+      "type" : "button"
+    },
+    "tag" : "button",
+    "text" : "Auto"
+  }, {
+    "attributes" : {
+      "class" : "bi bi-circle-half me-2 opacity-50"
+    },
+    "tag" : "i",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "bi bi-check2 ms-auto"
+    },
+    "tag" : "i",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "itemscope" : "",
+      "itemtype" : "https://schema.org/Article"
+    },
+    "tag" : "section",
+    "text" : "A FULL-STACK SAMPLE WEB APPLICATION BUILT ON TOP OF ASPECTRAN AND MYBATIS\n\nJPetStore Demo\n\nThe goal of the JPetStore Demo App is to provide and demonstrate a sample web application that leverages Aspectran and MyBatis.\n\nSample Apps\nJPetStore Demo\nCategories \nAppMon\n?\n 0 Sign In Sign Up\nBulldog\nReturn to DOGS\nItem ID\tProduct ID\tDescription\tList Price\t \nEST-33\tK9-BD-01\tFrench Bulldog Puppy Bulldog\t$180,00\tAdd to Cart\nEST-6\tK9-BD-01\tMale Adult Bulldog\t$18,50\tAdd to Cart\nEST-7\tK9-BD-01\tFemale Puppy "
+  }, {
+    "attributes" : {
+      "id" : "masthead"
+    },
+    "tag" : "div",
+    "text" : "A FULL-STACK SAMPLE WEB APPLICATION BUILT ON TOP OF ASPECTRAN AND MYBATIS\n\nJPetStore Demo\n\nThe goal of the JPetStore Demo App is to provide and demonstrate a sample web application that leverages Aspectran and MyBatis.\n\nSample Apps\nJPetStore Demo"
+  }, {
+    "attributes" : {
+      "class" : "container"
+    },
+    "tag" : "div",
+    "text" : "A FULL-STACK SAMPLE WEB APPLICATION BUILT ON TOP OF ASPECTRAN AND MYBATIS\n\nJPetStore Demo\n\nThe goal of the JPetStore Demo App is to provide and demonstrate a sample web application that leverages Aspectran and MyBatis."
+  }, {
+    "attributes" : { },
+    "tag" : "header",
+    "text" : "A FULL-STACK SAMPLE WEB APPLICATION BUILT ON TOP OF ASPECTRAN AND MYBATIS\n\nJPetStore Demo\n\nThe goal of the JPetStore Demo App is to provide and demonstrate a sample web application that leverages Aspectran and MyBatis."
+  }, {
+    "attributes" : {
+      "class" : "subheadline",
+      "itemprop" : "alternativeHeadline"
+    },
+    "tag" : "p",
+    "text" : "A FULL-STACK SAMPLE WEB APPLICATION BUILT ON TOP OF ASPECTRAN AND MYBATIS"
+  }, {
+    "attributes" : {
+      "itemprop" : "headline"
+    },
+    "tag" : "h1",
+    "text" : "JPetStore Demo"
+  }, {
+    "attributes" : {
+      "class" : "teaser",
+      "itemprop" : "description"
+    },
+    "tag" : "p",
+    "text" : "The goal of the JPetStore Demo App is to provide and demonstrate a sample web application that leverages Aspectran and MyBatis."
+  }, {
+    "attributes" : {
+      "class" : "hexagons"
+    },
+    "tag" : "div",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "hexagon hex1"
+    },
+    "tag" : "div",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "hexagon hex2"
+    },
+    "tag" : "div",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "hexagon hex3"
+    },
+    "tag" : "div",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "hexagon hex5"
+    },
+    "tag" : "div",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "hexagon hex6"
+    },
+    "tag" : "div",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "container breadcrumb-bar"
+    },
+    "tag" : "div",
+    "text" : "Sample Apps\nJPetStore Demo"
+  }, {
+    "attributes" : {
+      "aria-label" : "You are here:",
+      "role" : "navigation"
+    },
+    "tag" : "nav",
+    "text" : "Sample Apps\nJPetStore Demo"
+  }, {
+    "attributes" : {
+      "class" : "breadcrumb",
+      "itemprop" : "breadcrumb"
+    },
+    "tag" : "ol",
+    "text" : "Sample Apps\nJPetStore Demo"
+  }, {
+    "attributes" : {
+      "class" : "breadcrumb-item"
+    },
+    "tag" : "li",
+    "text" : "Sample Apps"
+  }, {
+    "attributes" : {
+      "href" : "https://public.aspectran.com/"
+    },
+    "tag" : "a",
+    "text" : "Sample Apps"
+  }, {
+    "attributes" : {
+      "class" : "breadcrumb-item active"
+    },
+    "tag" : "li",
+    "text" : "JPetStore Demo"
+  }, {
+    "attributes" : {
+      "href" : "/"
+    },
+    "tag" : "a",
+    "text" : "JPetStore Demo"
+  }, {
+    "attributes" : {
+      "class" : "container page-content",
+      "id" : "jpetstore-content"
+    },
+    "tag" : "div",
+    "text" : "Categories \nAppMon\n?\n 0 Sign In Sign Up\nBulldog\nReturn to DOGS\nItem ID\tProduct ID\tDescription\tList Price\t \nEST-33\tK9-BD-01\tFrench Bulldog Puppy Bulldog\t$180,00\tAdd to Cart\nEST-6\tK9-BD-01\tMale Adult Bulldog\t$18,50\tAdd to Cart\nEST-7\tK9-BD-01\tFemale Puppy Bulldog\t$18,50\tAdd to Cart\n\naspectran.com\n\nmybatis.org"
+  }, {
+    "attributes" : {
+      "class" : "container p-3",
+      "style" : "background-color: #353b3e;"
+    },
+    "tag" : "div",
+    "text" : "Categories \nAppMon\n?\n 0 Sign In Sign Up"
+  }, {
+    "attributes" : {
+      "class" : "d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+    },
+    "tag" : "div",
+    "text" : "Categories \nAppMon\n?\n 0 Sign In Sign Up"
+  }, {
+    "attributes" : {
+      "class" : "d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none",
+      "href" : "/"
+    },
+    "tag" : "a",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "alt" : "JPetStore",
+      "src" : "/images/logo-topbar.gif"
+    },
+    "tag" : "img",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "col-12 col-md-auto me-lg-auto d-flex justify-content-center"
+    },
+    "tag" : "div",
+    "text" : "Categories \nAppMon\n?"
+  }, {
+    "attributes" : {
+      "class" : "nav d-none d-xl-flex"
+    },
+    "tag" : "ul",
+    "text" : "Fish\n                \n                    Dogs\n                \n                    Reptiles\n                \n                    Cats\n                \n                    Birds\n                \n                    Supplies\n                \n                \n                    \n                        AppMon\n                    \n                    \n                \n                ?"
+  }, {
+    "attributes" : { },
+    "tag" : "li",
+    "text" : "Fish"
+  }, {
+    "attributes" : {
+      "class" : "nav-link px-2 text-white",
+      "href" : "/categories/FISH"
+    },
+    "tag" : "a",
+    "text" : "Fish"
+  }, {
+    "attributes" : { },
+    "tag" : "li",
+    "text" : "Dogs"
+  }, {
+    "attributes" : {
+      "class" : "nav-link px-2 text-white",
+      "href" : "/categories/DOGS"
+    },
+    "tag" : "a",
+    "text" : "Dogs"
+  }, {
+    "attributes" : { },
+    "tag" : "li",
+    "text" : "Reptiles"
+  }, {
+    "attributes" : {
+      "class" : "nav-link px-2 text-white",
+      "href" : "/categories/REPTILES"
+    },
+    "tag" : "a",
+    "text" : "Reptiles"
+  }, {
+    "attributes" : { },
+    "tag" : "li",
+    "text" : "Cats"
+  }, {
+    "attributes" : {
+      "class" : "nav-link px-2 text-white",
+      "href" : "/categories/CATS"
+    },
+    "tag" : "a",
+    "text" : "Cats"
+  }, {
+    "attributes" : { },
+    "tag" : "li",
+    "text" : "Birds"
+  }, {
+    "attributes" : {
+      "class" : "nav-link px-2 text-white",
+      "href" : "/categories/BIRDS"
+    },
+    "tag" : "a",
+    "text" : "Birds"
+  }, {
+    "attributes" : { },
+    "tag" : "li",
+    "text" : "Supplies"
+  }, {
+    "attributes" : {
+      "class" : "nav-link px-2 text-white",
+      "href" : "/categories/SUPPLIES"
+    },
+    "tag" : "a",
+    "text" : "Supplies"
+  }, {
+    "attributes" : { },
+    "tag" : "li",
+    "text" : "AppMon"
+  }, {
+    "attributes" : {
+      "class" : "nav-link px-2 text-warning",
+      "href" : "https://public.aspectran.com/monitoring/#jpetstore",
+      "target" : "_blank",
+      "title" : "Real-time logs, metrics, and traffic monitoring"
+    },
+    "tag" : "a",
+    "text" : "AppMon"
+  }, {
+    "attributes" : { },
+    "tag" : "li",
+    "text" : "?"
+  }, {
+    "attributes" : {
+      "class" : "nav-link px-2",
+      "href" : "/help.html"
+    },
+    "tag" : "a",
+    "text" : "?"
+  }, {
+    "attributes" : {
+      "class" : "nav d-xl-none"
+    },
+    "tag" : "div",
+    "text" : "Categories \nAppMon\n?"
+  }, {
+    "attributes" : {
+      "class" : "nav-item dropdown"
+    },
+    "tag" : "div",
+    "text" : "Categories"
+  }, {
+    "attributes" : {
+      "aria-expanded" : "false",
+      "class" : "nav-link dropdown-toggle px-2 text-white",
+      "data-bs-toggle" : "dropdown",
+      "href" : "#",
+      "role" : "button"
+    },
+    "tag" : "a",
+    "text" : "Categories"
+  }, {
+    "attributes" : {
+      "class" : "dropdown-menu"
+    },
+    "tag" : "ul",
+    "text" : "Fish\n                        \n                            Dogs\n                        \n                            Reptiles\n                        \n                            Cats\n                        \n                            Birds\n                        \n                            Supplies"
+  }, {
+    "attributes" : { },
+    "tag" : "li",
+    "text" : "Fish"
+  }, {
+    "attributes" : {
+      "class" : "dropdown-item",
+      "href" : "/categories/FISH"
+    },
+    "tag" : "a",
+    "text" : "Fish"
+  }, {
+    "attributes" : { },
+    "tag" : "li",
+    "text" : "Dogs"
+  }, {
+    "attributes" : {
+      "class" : "dropdown-item",
+      "href" : "/categories/DOGS"
+    },
+    "tag" : "a",
+    "text" : "Dogs"
+  }, {
+    "attributes" : { },
+    "tag" : "li",
+    "text" : "Reptiles"
+  }, {
+    "attributes" : {
+      "class" : "dropdown-item",
+      "href" : "/categories/REPTILES"
+    },
+    "tag" : "a",
+    "text" : "Reptiles"
+  }, {
+    "attributes" : { },
+    "tag" : "li",
+    "text" : "Cats"
+  }, {
+    "attributes" : {
+      "class" : "dropdown-item",
+      "href" : "/categories/CATS"
+    },
+    "tag" : "a",
+    "text" : "Cats"
+  }, {
+    "attributes" : { },
+    "tag" : "li",
+    "text" : "Birds"
+  }, {
+    "attributes" : {
+      "class" : "dropdown-item",
+      "href" : "/categories/BIRDS"
+    },
+    "tag" : "a",
+    "text" : "Birds"
+  }, {
+    "attributes" : { },
+    "tag" : "li",
+    "text" : "Supplies"
+  }, {
+    "attributes" : {
+      "class" : "dropdown-item",
+      "href" : "/categories/SUPPLIES"
+    },
+    "tag" : "a",
+    "text" : "Supplies"
+  }, {
+    "attributes" : {
+      "class" : "nav-item"
+    },
+    "tag" : "div",
+    "text" : "AppMon"
+  }, {
+    "attributes" : {
+      "class" : "nav-link text-warning",
+      "href" : "https://public.aspectran.com/monitoring/#jpetstore",
+      "target" : "_blank",
+      "title" : "Real-time logs, metrics, and traffic monitoring"
+    },
+    "tag" : "a",
+    "text" : "AppMon"
+  }, {
+    "attributes" : {
+      "class" : "nav-item"
+    },
+    "tag" : "div",
+    "text" : "?"
+  }, {
+    "attributes" : {
+      "class" : "nav-link",
+      "href" : "/help.html"
+    },
+    "tag" : "a",
+    "text" : "?"
+  }, {
+    "attributes" : {
+      "class" : "me-lg-3 mb-lg-0"
+    },
+    "tag" : "div",
+    "text" : "0 Sign In Sign Up"
+  }, {
+    "attributes" : {
+      "class" : "btn btn-success",
+      "href" : "/cart/viewCart"
+    },
+    "tag" : "a",
+    "text" : "0"
+  }, {
+    "attributes" : {
+      "class" : "bi bi-cart4"
+    },
+    "tag" : "i",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "btn btn-outline-light me-2",
+      "href" : "/account/signonForm"
+    },
+    "tag" : "a",
+    "text" : "Sign In"
+  }, {
+    "attributes" : {
+      "class" : "btn btn-secondary",
+      "href" : "/account/newAccountForm"
+    },
+    "tag" : "a",
+    "text" : "Sign Up"
+  }, {
+    "attributes" : {
+      "action" : "/catalog/searchProducts",
+      "class" : "col-12 col-md-6 col-lg-2 mt-3 mt-md-0",
+      "role" : "search"
+    },
+    "tag" : "form",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "input-group flex-nowrap"
+    },
+    "tag" : "div",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "aria-describedby" : "jpetstore-search-btn",
+      "aria-label" : "Search",
+      "class" : "form-control border-secondary-subtle",
+      "name" : "keyword",
+      "placeholder" : "Search",
+      "type" : "search"
+    },
+    "tag" : "input",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "btn btn-outline-secondary border-secondary-subtle",
+      "id" : "jpetstore-search-btn",
+      "type" : "button"
+    },
+    "tag" : "button",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "bi bi-search"
+    },
+    "tag" : "i",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "container py-4 px-3 px-lg-4"
+    },
+    "tag" : "div",
+    "text" : "Bulldog\nReturn to DOGS\nItem ID\tProduct ID\tDescription\tList Price\t \nEST-33\tK9-BD-01\tFrench Bulldog Puppy Bulldog\t$180,00\tAdd to Cart\nEST-6\tK9-BD-01\tMale Adult Bulldog\t$18,50\tAdd to Cart\nEST-7\tK9-BD-01\tFemale Puppy Bulldog\t$18,50\tAdd to Cart"
+  }, {
+    "attributes" : {
+      "class" : "d-flex justify-content-between align-items-center mb-3"
+    },
+    "tag" : "div",
+    "text" : "Bulldog\nReturn to DOGS"
+  }, {
+    "attributes" : { },
+    "tag" : "h3",
+    "text" : "Bulldog"
+  }, {
+    "attributes" : {
+      "class" : "btn btn-secondary btn-sm",
+      "href" : "/categories/DOGS"
+    },
+    "tag" : "a",
+    "text" : "Return to DOGS"
+  }, {
+    "attributes" : {
+      "class" : "table table-striped"
+    },
+    "tag" : "table",
+    "text" : "Item ID\tProduct ID\tDescription\tList Price\t \nEST-33\tK9-BD-01\tFrench Bulldog Puppy Bulldog\t$180,00\tAdd to Cart\nEST-6\tK9-BD-01\tMale Adult Bulldog\t$18,50\tAdd to Cart\nEST-7\tK9-BD-01\tFemale Puppy Bulldog\t$18,50\tAdd to Cart"
+  }, {
+    "attributes" : { },
+    "tag" : "thead",
+    "text" : "Item ID\tProduct ID\tDescription\tList Price"
+  }, {
+    "attributes" : { },
+    "tag" : "tr",
+    "text" : "Item ID\tProduct ID\tDescription\tList Price"
+  }, {
+    "attributes" : { },
+    "tag" : "th",
+    "text" : "Item ID"
+  }, {
+    "attributes" : { },
+    "tag" : "th",
+    "text" : "Product ID"
+  }, {
+    "attributes" : { },
+    "tag" : "th",
+    "text" : "Description"
+  }, {
+    "attributes" : { },
+    "tag" : "th",
+    "text" : "List Price"
+  }, {
+    "attributes" : { },
+    "tag" : "th",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "table-group-divider"
+    },
+    "tag" : "tbody",
+    "text" : "EST-33\tK9-BD-01\tFrench Bulldog Puppy Bulldog\t$180,00\tAdd to Cart\nEST-6\tK9-BD-01\tMale Adult Bulldog\t$18,50\tAdd to Cart\nEST-7\tK9-BD-01\tFemale Puppy Bulldog\t$18,50\tAdd to Cart"
+  }, {
+    "attributes" : { },
+    "tag" : "tr",
+    "text" : "EST-33\tK9-BD-01\tFrench Bulldog Puppy Bulldog\t$180,00\tAdd to Cart"
+  }, {
+    "attributes" : { },
+    "tag" : "td",
+    "text" : "EST-33"
+  }, {
+    "attributes" : {
+      "href" : "/products/K9-BD-01/items/EST-33"
+    },
+    "tag" : "a",
+    "text" : "EST-33"
+  }, {
+    "attributes" : { },
+    "tag" : "td",
+    "text" : "K9-BD-01"
+  }, {
+    "attributes" : { },
+    "tag" : "td",
+    "text" : "French Bulldog Puppy Bulldog"
+  }, {
+    "attributes" : { },
+    "tag" : "td",
+    "text" : "$180,00"
+  }, {
+    "attributes" : {
+      "class" : "text-end"
+    },
+    "tag" : "td",
+    "text" : "Add to Cart"
+  }, {
+    "attributes" : {
+      "class" : "btn btn-primary btn-sm",
+      "href" : "/cart/addItemToCart?itemId=EST-33"
+    },
+    "tag" : "a",
+    "text" : "Add to Cart"
+  }, {
+    "attributes" : { },
+    "tag" : "tr",
+    "text" : "EST-6\tK9-BD-01\tMale Adult Bulldog\t$18,50\tAdd to Cart"
+  }, {
+    "attributes" : { },
+    "tag" : "td",
+    "text" : "EST-6"
+  }, {
+    "attributes" : {
+      "href" : "/products/K9-BD-01/items/EST-6"
+    },
+    "tag" : "a",
+    "text" : "EST-6"
+  }, {
+    "attributes" : { },
+    "tag" : "td",
+    "text" : "K9-BD-01"
+  }, {
+    "attributes" : { },
+    "tag" : "td",
+    "text" : "Male Adult Bulldog"
+  }, {
+    "attributes" : { },
+    "tag" : "td",
+    "text" : "$18,50"
+  }, {
+    "attributes" : {
+      "class" : "text-end"
+    },
+    "tag" : "td",
+    "text" : "Add to Cart"
+  }, {
+    "attributes" : {
+      "class" : "btn btn-primary btn-sm",
+      "href" : "/cart/addItemToCart?itemId=EST-6"
+    },
+    "tag" : "a",
+    "text" : "Add to Cart"
+  }, {
+    "attributes" : { },
+    "tag" : "tr",
+    "text" : "EST-7\tK9-BD-01\tFemale Puppy Bulldog\t$18,50\tAdd to Cart"
+  }, {
+    "attributes" : { },
+    "tag" : "td",
+    "text" : "EST-7"
+  }, {
+    "attributes" : {
+      "href" : "/products/K9-BD-01/items/EST-7"
+    },
+    "tag" : "a",
+    "text" : "EST-7"
+  }, {
+    "attributes" : { },
+    "tag" : "td",
+    "text" : "K9-BD-01"
+  }, {
+    "attributes" : { },
+    "tag" : "td",
+    "text" : "Female Puppy Bulldog"
+  }, {
+    "attributes" : { },
+    "tag" : "td",
+    "text" : "$18,50"
+  }, {
+    "attributes" : {
+      "class" : "text-end"
+    },
+    "tag" : "td",
+    "text" : "Add to Cart"
+  }, {
+    "attributes" : {
+      "class" : "btn btn-primary btn-sm",
+      "href" : "/cart/addItemToCart?itemId=EST-7"
+    },
+    "tag" : "a",
+    "text" : "Add to Cart"
+  }, {
+    "attributes" : {
+      "class" : "container p-3",
+      "style" : "background-color: #353b3e;"
+    },
+    "tag" : "div",
+    "text" : "aspectran.com\n\nmybatis.org"
+  }, {
+    "attributes" : {
+      "class" : "d-flex flex-wrap justify-content-between align-items-center"
+    },
+    "tag" : "footer",
+    "text" : "aspectran.com\n\nmybatis.org"
+  }, {
+    "attributes" : {
+      "class" : "col-md-4 align-items-center"
+    },
+    "tag" : "div",
+    "text" : "aspectran.com\n\nmybatis.org"
+  }, {
+    "attributes" : {
+      "class" : "m-0"
+    },
+    "tag" : "p",
+    "text" : "aspectran.com"
+  }, {
+    "attributes" : {
+      "class" : "mb-3 me-2 mb-md-0 text-decoration-none lh-1",
+      "href" : "https://aspectran.com/"
+    },
+    "tag" : "a",
+    "text" : "aspectran.com"
+  }, {
+    "attributes" : {
+      "class" : "m-0"
+    },
+    "tag" : "p",
+    "text" : "mybatis.org"
+  }, {
+    "attributes" : {
+      "class" : "mb-3 me-2 mb-md-0 text-decoration-none lh-1 external",
+      "href" : "https://www.mybatis.org",
+      "target" : "_blank"
+    },
+    "tag" : "a",
+    "text" : "mybatis.org"
+  }, {
+    "attributes" : {
+      "class" : "col-md-4 justify-content-end d-flex"
+    },
+    "tag" : "div",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "container"
+    },
+    "tag" : "div",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "row",
+      "id" : "up-to-top"
+    },
+    "tag" : "div",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "col text-end"
+    },
+    "tag" : "div",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "href" : "#top-of-page"
+    },
+    "tag" : "a",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "bi bi-chevron-up"
+    },
+    "tag" : "i",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "id" : "footer-content"
+    },
+    "tag" : "footer",
+    "text" : "ABOUT ASPECTRAN\n\nAspectran is a lightweight, high‑performance framework for building both simple shell applications and large enterprise web services on the JVM.\n\nGET INVOLVED\n GitHub\n\nCopyright © 2008-present The Aspectran Project\n\nPowered by Aspectran 9.8.2-SNAPSHOT"
+  }, {
+    "attributes" : {
+      "id" : "footer"
+    },
+    "tag" : "div",
+    "text" : "ABOUT ASPECTRAN\n\nAspectran is a lightweight, high‑performance framework for building both simple shell applications and large enterprise web services on the JVM.\n\nGET INVOLVED\n GitHub"
+  }, {
+    "attributes" : {
+      "class" : "container"
+    },
+    "tag" : "div",
+    "text" : "ABOUT ASPECTRAN\n\nAspectran is a lightweight, high‑performance framework for building both simple shell applications and large enterprise web services on the JVM.\n\nGET INVOLVED\n GitHub"
+  }, {
+    "attributes" : {
+      "class" : "row"
+    },
+    "tag" : "div",
+    "text" : "ABOUT ASPECTRAN\n\nAspectran is a lightweight, high‑performance framework for building both simple shell applications and large enterprise web services on the JVM.\n\nGET INVOLVED\n GitHub"
+  }, {
+    "attributes" : {
+      "class" : "col-sm-8 col-md-7 col-lg-6 col-xl-5 d-flex"
+    },
+    "tag" : "div",
+    "text" : "ABOUT ASPECTRAN\n\nAspectran is a lightweight, high‑performance framework for building both simple shell applications and large enterprise web services on the JVM."
+  }, {
+    "attributes" : {
+      "class" : "d-none d-sm-block mt-1"
+    },
+    "tag" : "div",
+    "text" : ""
+  }, {
+    "attributes" : {
+      "class" : "logo float-start me-3 me-lg-4",
+      "href" : "https://aspectran.com/aspectran/",
+      "title" : "Aspectran"
+    },
+    "tag" : "a",
+    "text" : ""
+  }, {
+    "attributes" : { },
+    "tag" : "div",
+    "text" : "ABOUT ASPECTRAN\n\nAspectran is a lightweight, high‑performance framework for building both simple shell applications and large enterprise web services on the JVM."
+  }, {
+    "attributes" : {
+      "href" : "https://aspectran.com/aspectran/"
+    },
+    "tag" : "a",
+    "text" : "ABOUT ASPECTRAN"
+  }, {
+    "attributes" : { },
+    "tag" : "h5",
+    "text" : "ABOUT ASPECTRAN"
+  }, {
+    "attributes" : { },
+    "tag" : "p",
+    "text" : "Aspectran is a lightweight, high‑performance framework for building both simple shell applications and large enterprise web services on the JVM."
+  }, {
+    "attributes" : {
+      "href" : "https://aspectran.com/aspectran/"
+    },
+    "tag" : "a",
+    "text" : "Aspectran is a lightweight, high‑performance framework for building both simple shell applications and large enterprise web services on the JVM."
+  }, {
+    "attributes" : {
+      "class" : "col-sm-4 col-md-5 col-lg-3 offset-lg-1"
+    },
+    "tag" : "div",
+    "text" : "GET INVOLVED\n GitHub"
+  }, {
+    "attributes" : { },
+    "tag" : "h5",
+    "text" : "GET INVOLVED"
+  }, {
+    "attributes" : {
+      "class" : "list-unstyled"
+    },
+    "tag" : "ul",
+    "text" : "GitHub"
+  }, {
+    "attributes" : {
+      "class" : "bi bi-github"
+    },
+    "tag" : "li",
+    "text" : "GitHub"
+  }, {
+    "attributes" : {
+      "class" : "external",
+      "href" : "https://github.com/aspectran",
+      "target" : "_blank",
+      "title" : ""
+    },
+    "tag" : "a",
+    "text" : "GitHub"
+  }, {
+    "attributes" : {
+      "id" : "subfooter"
+    },
+    "tag" : "div",
+    "text" : "Copyright © 2008-present The Aspectran Project\n\nPowered by Aspectran 9.8.2-SNAPSHOT"
+  }, {
+    "attributes" : {
+      "class" : "container"
+    },
+    "tag" : "div",
+    "text" : "Copyright © 2008-present The Aspectran Project\n\nPowered by Aspectran 9.8.2-SNAPSHOT"
+  }, {
+    "attributes" : {
+      "class" : "row mb-1"
+    },
+    "tag" : "nav",
+    "text" : "Copyright © 2008-present The Aspectran Project\n\nPowered by Aspectran 9.8.2-SNAPSHOT"
+  }, {
+    "attributes" : {
+      "class" : "col-md-6 credits",
+      "id" : "subfooter-left"
+    },
+    "tag" : "section",
+    "text" : "Copyright © 2008-present The Aspectran Project"
+  }, {
+    "attributes" : { },
+    "tag" : "p",
+    "text" : "Copyright © 2008-present The Aspectran Project"
+  }, {
+    "attributes" : {
+      "class" : "col-md-6 social-icons text-end",
+      "id" : "subfooter-right"
+    },
+    "tag" : "section",
+    "text" : "Powered by Aspectran 9.8.2-SNAPSHOT"
+  }, {
+    "attributes" : {
+      "href" : "https://aspectran.com"
+    },
+    "tag" : "a",
+    "text" : "Powered by Aspectran 9.8.2-SNAPSHOT"
+  }, {
+    "attributes" : { },
+    "tag" : "script",
+    "text" : "$(function () {\n        /* google search */\n        $(\"form[name=google_quick_search]\").submit(function (event) {\n            window.open(\"https://www.google.com/search?q=\" + this.keyword.value + \"+site:https%3A%2F%2Faspectran.com\");\n            event.preventDefault();\n        });\n    });"
+  }, {
+    "attributes" : { },
+    "tag" : "script",
+    "text" : "/* Creating custom :external selector */\n    $.expr[':'].external = function (obj) {\n        return obj.href\n            && !obj.href.match(/aspectran.com\\//)\n            && !obj.href.match(/^javascript:/)\n            && !obj.href.match(/^mailto:/)\n            && (obj.hostname !== location.hostname);\n    };\n    $(function () {\n        /* Add 'external' CSS class to all external links */\n        $('a:external').addClass('external');\n        /* turn target into target=_blank for elements w externa"
+  }, {
+    "attributes" : { },
+    "tag" : "script",
+    "text" : "$(function () {\n        let links = $(\"#navbarSupportedContent .navbar-nav a[href='\" + decodeURI(location.pathname) + \"']\").last();\n        if (links.length > 0) {\n            let arr = [];\n            arr.push({'name': links.text(), 'href': location.pathname});\n            links.parentsUntil(\".navbar-nav\").each(function () {\n                let a2 = $(this).find(\".nav-link\");\n                if (a2.is(\"a\")) {\n                    let href = a2.attr(\"href\");\n                    if (href !== locat"
+  } ],
+  "title" : "JPetStore Demo",
+  "url" : "https://jpetstore.aspectran.com/products/K9-BD-01"
+}
