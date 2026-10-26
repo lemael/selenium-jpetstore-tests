@@ -45,16 +45,16 @@ public class CategoryPage {
 
         var elements = driver.findElements(locator);
 
-        System.out.println("Nombre de liens trouvés : " + elements.size());
+        System.out.println("Anzahl der gefundenen Links: " + elements.size());
 
         for (int i = 0; i < elements.size(); i++) {
             var element = elements.get(i);
 
             System.out.println(
-                "Lien " + i
-                + " | Texte : " + element.getText()
-                + " | Visible : " + element.isDisplayed()
-                + " | Activé : " + element.isEnabled()
+                "Link " + i
+                + " | Text : " + element.getText()
+                + " | Sichtbar : " + element.isDisplayed()
+                + " | Aktiv : " + element.isEnabled()
             );
         }
     }
